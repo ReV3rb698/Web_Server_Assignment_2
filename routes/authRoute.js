@@ -6,7 +6,7 @@ const { title } = require("process");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.render("home", { title: "Home" , salut: "Hello World"});
+  res.render("home", { title: "Home" , salut: "Kevin is Goated"});
 });
 
 router.get("/login", (req, res) => {
