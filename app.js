@@ -25,6 +25,8 @@ app.use(passport.session());
 // Use the authentication routes
 app.use('/', authRoutes);
 app.use('/', indexRoutes);
+
+
 // Start the server
 app.listen(3000, () => {
   console.log('Server started on http://localhost:3000');
