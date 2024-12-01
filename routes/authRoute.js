@@ -30,7 +30,7 @@ router.get(
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
     // Successful authentication, redirect to the secured part of the application
-    res.redirect('/dashboard'); // Replace with your desired redirect
+    res.redirect('/portfolio'); // Replace with your desired redirect
   }
 );
 

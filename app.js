@@ -22,9 +22,9 @@ app.use(
   })
 );
 
-app.get('/dashboard', (req, res) => {
+app.get('/portfolio', (req, res) => {
   const username = 'ReV3rb698'; // Example username, could come from user session or database
-  res.render('dashboard', { username });
+  res.render('portfolio', { username });
 });
 
 // Initialize Passport middleware
