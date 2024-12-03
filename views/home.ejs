@@ -1,11 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- CDN for the GitHub Contributions Widget -->
+    <script
+      type="module"
+      defer
+      src="https://cdn.jsdelivr.net/gh/imananoosheh/github-contributions-fetch@latest/github_calendar_widget.js"
+    ></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1><%= salut || 'Welcome' %></h1>
-    
-    <p>Click <a href="/login">here</a> to login</p>
+    <a href="/login" class="btn btn-outline-danger position-absolute top-0 end-0 m-3">Login</a>
+    <header class="bg-primary text-white text-center py-3">
+      <h1>Welcome to My Portfolio</h1>
+    </header>
+    <!--About Me Blurb-->
+  <div id="about-me">
+     <div class="position-relative overflow-hidden m-md-3 text-center bg-light">
+       <div class="col-md-5 p-lg-5 mx-auto my-5">
+         <h1 class="display-4 font-weight-normal">whoami</h1>
+         <div class="image-container text-center"> <!-- Add text-center here -->
+           <img src="/Images/about_me_Caleb.jpg" class="img-fluid mx-auto d-block"> <!-- Use Bootstrap classes to center the image -->
+         </div>
+        <p class="lead font-weight-normal">Hi! I am Caleb Campbell, a third-term ACIT student at BCIT with a passion for coding and Linux. As I work towards my diploma, I’ve gained hands-on experience in various programming languages and development tools, with a particular interest in solving problems through software development.</p>
+         <!-- <p class="lead font-weight-normal">I'm also a dedicated Linux enthusiast, exploring different distributions and optimizing systems, which has deepened my understanding of system administration. I’m always eager to challenge myself, learn new technologies, and apply my skills to real-world projects, with an eye on growing in the ever-evolving tech landscape.</p> -->
+      </div>
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+      </div>
+    </div>  
+    <!--Github Projects-->   
+  <div id="github-project">
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <div class="card-body">
+                <h4 contenteditable="false">Web_Server_Assignment_2</h4>
+                <p class="card-text" contenteditable="false">This is a project to create a personal portfolio and host it using Nginx, providing security through HAProxy while considering Load Balancing.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://github.com/ReV3rb698/Web_Server_Assignment_2" target="_blank">View</a></button>
+                  </div>
+                  <small class="text-muted">19 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <div class="card-body">
+                <h4 contenteditable="false">nginx-2420</h4>
+                <p class="card-text" contenteditable="false">This is a project we did to practice Linux Bash Scripting for ACIT 2420.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      <a href="https://github.com/ReV3rb698/nginx-2420" target="_blank">View</a>
+                    </button>
+                  </div>
+                  <small class="text-muted">42 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <div class="card-body">
+                <h4 contenteditable="false">BCITstragram</h4>
+                <p class="card-text" contenteditable="false">A Web Development Project mimicking Instagram's ability to edit pictures.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                    <a href="https://github.com/ReV3rb698/Web_Development_Caleb_Campbell" target="_blank">
+                      View
+                    </a>
+                    </button>
+                  </div>
+                  <small class="text-muted">16 days</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!--Github Widget-->
+    <section class="jumbotron text-center">
+      <section class="d-flex justify-content-center align-items-center">
+        <div class="text-center">
+          <h2 class="mb-4">My GitHub Contributions</h2>
+          <!-- Dynamically display the username -->
+          <h3>ReV3rb698</h3>
+          <div
+            id="calendar-component"
+            username="ReV3rb698"
+            theme-color="#3498db"
+          ></div>
+        </div>
+      </section>
+    </section>
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>This ACIT 3475 Web Server Project's Front End was created using Bootstrap <br>
+      New to Bootstrap? <a href="../../">Visit the homepage</a> or read their <a href="../../getting-started/">getting started guide</a>.</p>
+    </div>
   </body>
 </html>
